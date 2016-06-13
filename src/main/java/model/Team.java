@@ -8,4 +8,12 @@ import java.util.List;
 public class Team {
     //TODO: Write all stuff
     List<Project> projects;
+
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
+    }
 }
