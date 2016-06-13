@@ -22,9 +22,25 @@ public class User {
 
     }
 
-    public User(User user) {
-
+    public User(String email, Integer id, String location, String login, String name, String password,
+                Double rating, List<String> reviews, HashMap<Skills, SkillTestResult> skills, String surname) {
+        this.email = email;
+        this.id = id;
+        this.location = location;
+        this.login = login;
+        this.name = name;
+        this.password = password;
+        this.rating = rating;
+        this.reviews = reviews;
+        this.skills = skills;
+        this.surname = surname;
     }
+
+    public User(User user) {
+        this(user.getEmail(), user.getId(), user.getLocation(), user.getLogin(), user.getName(),
+                user.getPassword(), user.getRating(), user.getReviews(), user.getSkills(), user.getSurname());
+    }
+
 
     public Integer getId() {
         return id;
@@ -96,6 +112,14 @@ public class User {
 
     public void setReviews(List<String> reviews) {
         this.reviews = reviews;
+    }
+
+    public HashMap<Skills, SkillTestResult> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(HashMap<Skills, SkillTestResult> skills) {
+        this.skills = skills;
     }
 
     @Override

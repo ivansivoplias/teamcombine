@@ -15,6 +15,23 @@ public class Project {
     String projectTitle;
     String description;
 
+    public Project() {
+    }
+
+    public Project(Project project) {
+        this(project.getDescription(), project.getEndDate(), project.getHashTags(),
+                project.getProjectTitle(), project.getProjectType(), project.getStartDate());
+    }
+
+    public Project(String description, Date endDate, List<String> hashTags, String projectTitle, TypeOfProject projectType, Date startDate) {
+        this.description = description;
+        this.endDate = endDate;
+        this.hashTags = hashTags;
+        this.projectTitle = projectTitle;
+        this.projectType = projectType;
+        this.startDate = startDate;
+    }
+
     public String getProjectTitle() {
         return projectTitle;
     }

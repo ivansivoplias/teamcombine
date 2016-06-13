@@ -9,6 +9,18 @@ public class SkillTestResultDTO {
     private Date date;
     private Long result;
 
+    public SkillTestResultDTO() {
+    }
+
+    public SkillTestResultDTO(SkillTestResultDTO skillTestResultDTO) {
+        this(skillTestResultDTO.getDate(), skillTestResultDTO.getResult());
+    }
+
+    public SkillTestResultDTO(Date date, Long result) {
+        this.date = date;
+        this.result = result;
+    }
+
     public Date getDate() {
         return date;
     }

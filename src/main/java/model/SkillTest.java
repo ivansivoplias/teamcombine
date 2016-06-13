@@ -10,6 +10,19 @@ public class SkillTest {
     List<String> allAnswers;
     List<String> rightAnswers;
 
+    public SkillTest() {
+    }
+
+    public SkillTest(SkillTest skillTest) {
+        this(skillTest.getAllAnswers(), skillTest.getQuestions(), skillTest.getRightAnswers());
+    }
+
+    public SkillTest(List<String> allAnswers, List<String> questions, List<String> rightAnswers) {
+        this.allAnswers = allAnswers;
+        this.questions = questions;
+        this.rightAnswers = rightAnswers;
+    }
+
     public List<String> getQuestions() {
         return questions;
     }

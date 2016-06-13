@@ -23,7 +23,22 @@ public class UserDTO {
     }
 
     public UserDTO(UserDTO userDTO) {
+        this(userDTO.getId(), userDTO.getLogin(), userDTO.getPassword(), userDTO.getName(), userDTO.getEmail(),
+                userDTO.getLocation(), userDTO.getRating(), userDTO.getReviews(), userDTO.getSkills(), userDTO.getSurname());
+    }
 
+    public UserDTO(Integer id, String login, String password, String name, String email, String location,
+                   Double rating, List<String> reviews, HashMap<Skills, SkillTestResult> skills, String surname) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.location = location;
+        this.rating = rating;
+        this.reviews = reviews;
+        this.skills = skills;
+        this.surname = surname;
     }
 
     public Integer getId() {
@@ -96,6 +111,14 @@ public class UserDTO {
 
     public void setReviews(List<String> reviews) {
         this.reviews = reviews;
+    }
+
+    public HashMap<Skills, SkillTestResult> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(HashMap<Skills, SkillTestResult> skills) {
+        this.skills = skills;
     }
 
     @Override

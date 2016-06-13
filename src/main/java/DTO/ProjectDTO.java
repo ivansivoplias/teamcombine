@@ -15,6 +15,23 @@ public class ProjectDTO {
     String projectTitle;
     String description;
 
+    public ProjectDTO() {
+    }
+
+    public ProjectDTO(Date startDate, Date endDate, TypeOfProject projectType, List<String> hashTags, String projectTitle, String description) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.projectType = projectType;
+        this.hashTags = hashTags;
+        this.projectTitle = projectTitle;
+        this.description = description;
+    }
+
+    public ProjectDTO(ProjectDTO projectDTO) {
+        this(projectDTO.getStartDate(), projectDTO.getEndDate(), projectDTO.getProjectType(),
+                projectDTO.getHashTags(), projectDTO.getProjectTitle(), projectDTO.getDescription());
+    }
+
     public String getProjectTitle() {
         return projectTitle;
     }
