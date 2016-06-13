@@ -1,14 +1,15 @@
-package model;
+package DTO;
 
+import model.SkillTestResult;
 import model.enums.Skills;
 
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by Ivan on 05.06.2016.
+ * Created by Andrew on 13.06.2016.
  */
-public class User {
+public class UserDTO {
     private Integer id;
     private String login, password;
     private String name, surname;
@@ -16,13 +17,12 @@ public class User {
     private String location;
     private Double rating;
     private List<String> reviews;
-    private HashMap<Skills,SkillTestResult> skills;
+    private HashMap<Skills, SkillTestResult> skills;
 
-    public User() {
-
+    public UserDTO() {
     }
 
-    public User(User user) {
+    public UserDTO(UserDTO userDTO) {
 
     }
 
